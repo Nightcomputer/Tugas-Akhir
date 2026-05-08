@@ -29736,3 +29736,103 @@
 2026-05-08 10:43:01,437 [INFO] [14849/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~115363.6 jam
 2026-05-08 10:43:24,812 [INFO]   → avg CER=7.90%  avg WER=21.91%
 2026-05-08 10:43:24,812 [INFO] [14850/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~115404.7 jam
+2026-05-08 11:40:45,135 [INFO] Loaded 18 gambar
+2026-05-08 11:40:50,703 [INFO] Total kombinasi: 18,662,400
+2026-05-08 11:40:51,217 [INFO] Kombinasi sudah selesai (di-skip): 14,849
+2026-05-08 11:40:51,337 [INFO] [14850/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~364.7 jam
+2026-05-08 11:41:21,563 [INFO]   → avg CER=7.99%  avg WER=22.43%
+2026-05-08 11:41:21,565 [INFO] [14851/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~78470.2 jam
+2026-05-08 11:41:52,444 [INFO]   → avg CER=12.86%  avg WER=36.13%
+2026-05-08 11:41:52,444 [INFO] [14852/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~105630.4 jam
+2026-05-08 11:42:22,180 [INFO]   → avg CER=13.53%  avg WER=37.13%
+2026-05-08 11:42:22,180 [INFO] [14853/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~117730.2 jam
+2026-05-08 11:42:50,233 [INFO]   → avg CER=7.91%  avg WER=22.36%
+2026-05-08 11:42:50,233 [INFO] [14854/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~123246.1 jam
+2026-05-08 11:43:18,231 [INFO]   → avg CER=7.84%  avg WER=20.66%
+2026-05-08 11:43:18,231 [INFO] [14855/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~126876.1 jam
+2026-05-08 11:43:45,789 [INFO]   → avg CER=7.84%  avg WER=20.66%
+2026-05-08 11:43:45,790 [INFO] [14856/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~129143.8 jam
+2026-05-08 11:44:13,581 [INFO]   → avg CER=8.44%  avg WER=22.68%
+2026-05-08 11:44:13,581 [INFO] [14857/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~130995.3 jam
+2026-05-08 11:44:43,355 [INFO]   → avg CER=12.30%  avg WER=35.25%
+2026-05-08 11:44:43,356 [INFO] [14858/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~133576.7 jam
+2026-05-08 11:45:13,060 [INFO]   → avg CER=12.54%  avg WER=35.59%
+2026-05-08 11:45:13,060 [INFO] [14859/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~135605.5 jam
+2026-05-08 11:45:41,374 [INFO]   → avg CER=8.05%  avg WER=22.11%
+2026-05-08 11:45:41,374 [INFO] [14860/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~136610.9 jam
+2026-05-08 11:46:09,379 [INFO]   → avg CER=8.02%  avg WER=22.23%
+2026-05-08 11:46:09,379 [INFO] [14861/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~137315.0 jam
+2026-05-08 11:46:38,348 [INFO]   → avg CER=8.02%  avg WER=22.23%
+2026-05-08 11:46:38,348 [INFO] [14862/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~138295.1 jam
+2026-05-08 11:47:07,378 [INFO]   → avg CER=8.13%  avg WER=22.62%
+2026-05-08 11:47:07,378 [INFO] [14863/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~139157.7 jam
+2026-05-08 11:47:37,798 [INFO]   → avg CER=12.94%  avg WER=36.30%
+2026-05-08 11:47:37,798 [INFO] [14864/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~140385.3 jam
+2026-05-08 11:48:08,137 [INFO]   → avg CER=13.60%  avg WER=37.24%
+2026-05-08 11:48:08,137 [INFO] [14865/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~141433.2 jam
+2026-05-08 11:48:36,432 [INFO]   → avg CER=8.04%  avg WER=22.56%
+2026-05-08 11:48:36,432 [INFO] [14866/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~141735.0 jam
+2026-05-08 11:49:05,206 [INFO]   → avg CER=7.99%  avg WER=20.96%
+2026-05-08 11:49:05,206 [INFO] [14867/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~142141.3 jam
+2026-05-08 11:49:34,456 [INFO]   → avg CER=7.99%  avg WER=20.96%
+2026-05-08 11:49:34,456 [INFO] [14868/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=gaussian_c | ETA ~142634.3 jam
+2026-05-08 11:50:03,477 [INFO]   → avg CER=8.61%  avg WER=22.95%
+2026-05-08 11:50:03,477 [INFO] [14869/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~143018.8 jam
+2026-05-08 11:50:31,374 [INFO]   → avg CER=13.25%  avg WER=38.17%
+2026-05-08 11:50:31,375 [INFO] [14870/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~143089.7 jam
+2026-05-08 11:51:00,347 [INFO]   → avg CER=12.92%  avg WER=37.15%
+2026-05-08 11:51:00,347 [INFO] [14871/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~143407.1 jam
+2026-05-08 11:51:25,527 [INFO]   → avg CER=7.38%  avg WER=21.63%
+2026-05-08 11:51:25,528 [INFO] [14872/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142842.9 jam
+2026-05-08 11:51:51,612 [INFO]   → avg CER=7.93%  avg WER=22.29%
+2026-05-08 11:51:51,612 [INFO] [14873/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142520.8 jam
+2026-05-08 11:52:17,259 [INFO]   → avg CER=7.93%  avg WER=22.29%
+2026-05-08 11:52:17,259 [INFO] [14874/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142134.0 jam
+2026-05-08 11:52:42,643 [INFO]   → avg CER=7.71%  avg WER=21.73%
+2026-05-08 11:52:42,644 [INFO] [14875/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~141724.6 jam
+2026-05-08 11:53:10,218 [INFO]   → avg CER=13.34%  avg WER=38.84%
+2026-05-08 11:53:10,218 [INFO] [14876/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~141765.6 jam
+2026-05-08 11:53:40,747 [INFO]   → avg CER=13.02%  avg WER=37.61%
+2026-05-08 11:53:40,747 [INFO] [14877/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142350.2 jam
+2026-05-08 11:54:10,212 [INFO]   → avg CER=7.87%  avg WER=23.38%
+2026-05-08 11:54:10,212 [INFO] [14878/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142704.5 jam
+2026-05-08 11:54:37,252 [INFO]   → avg CER=7.94%  avg WER=23.63%
+2026-05-08 11:54:37,252 [INFO] [14879/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142616.5 jam
+2026-05-08 11:55:03,447 [INFO]   → avg CER=7.94%  avg WER=23.63%
+2026-05-08 11:55:03,448 [INFO] [14880/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142393.0 jam
+2026-05-08 11:55:29,841 [INFO]   → avg CER=8.02%  avg WER=23.30%
+2026-05-08 11:55:29,841 [INFO] [14881/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142215.5 jam
+2026-05-08 11:55:58,326 [INFO]   → avg CER=13.25%  avg WER=38.17%
+2026-05-08 11:55:58,327 [INFO] [14882/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142377.2 jam
+2026-05-08 11:56:26,981 [INFO]   → avg CER=12.92%  avg WER=37.15%
+2026-05-08 11:56:26,982 [INFO] [14883/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142555.2 jam
+2026-05-08 11:56:55,984 [INFO]   → avg CER=7.38%  avg WER=21.63%
+2026-05-08 11:56:55,985 [INFO] [14884/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142774.5 jam
+2026-05-08 11:57:24,622 [INFO]   → avg CER=7.93%  avg WER=22.29%
+2026-05-08 11:57:24,622 [INFO] [14885/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142929.1 jam
+2026-05-08 11:57:51,741 [INFO]   → avg CER=7.93%  avg WER=22.29%
+2026-05-08 11:57:51,741 [INFO] [14886/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142862.7 jam
+2026-05-08 11:58:18,577 [INFO]   → avg CER=7.71%  avg WER=21.73%
+2026-05-08 11:58:18,577 [INFO] [14887/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142761.2 jam
+2026-05-08 11:58:47,686 [INFO]   → avg CER=13.34%  avg WER=38.84%
+2026-05-08 11:58:47,686 [INFO] [14888/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142966.9 jam
+2026-05-08 11:59:16,846 [INFO]   → avg CER=13.02%  avg WER=37.61%
+2026-05-08 11:59:16,847 [INFO] [14889/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~143168.8 jam
+2026-05-08 11:59:43,634 [INFO]   → avg CER=7.87%  avg WER=23.38%
+2026-05-08 11:59:43,634 [INFO] [14890/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~143061.2 jam
+2026-05-08 12:00:09,199 [INFO]   → avg CER=7.94%  avg WER=23.63%
+2026-05-08 12:00:09,199 [INFO] [14891/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142807.9 jam
+2026-05-08 12:00:36,333 [INFO]   → avg CER=7.94%  avg WER=23.63%
+2026-05-08 12:00:36,333 [INFO] [14892/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142755.4 jam
+2026-05-08 12:01:03,165 [INFO]   → avg CER=8.02%  avg WER=23.30%
+2026-05-08 12:01:03,165 [INFO] [14893/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142669.7 jam
+2026-05-08 12:01:31,815 [INFO]   → avg CER=13.26%  avg WER=37.81%
+2026-05-08 12:01:31,815 [INFO] [14894/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142797.1 jam
+2026-05-08 12:02:00,841 [INFO]   → avg CER=12.91%  avg WER=36.76%
+2026-05-08 12:02:00,841 [INFO] [14895/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142961.3 jam
+2026-05-08 12:02:27,544 [INFO]   → avg CER=7.41%  avg WER=21.39%
+2026-05-08 12:02:27,544 [INFO] [14896/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142862.5 jam
+2026-05-08 12:02:54,297 [INFO]   → avg CER=7.88%  avg WER=21.77%
+2026-05-08 12:02:54,297 [INFO] [14897/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142773.2 jam
+2026-05-08 12:03:20,564 [INFO]   → avg CER=7.88%  avg WER=21.77%
+2026-05-08 12:03:20,565 [INFO] [14898/18662400] dn=5(median) tr=30 cl=1.5 bs=101 c=55 bm=mean_c | ETA ~142636.2 jam
