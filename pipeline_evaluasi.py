@@ -11,10 +11,8 @@ from scipy.ndimage import interpolation as inter
 from jiwer import cer, wer
 from itertools import combinations
 
-# ── Sesuaikan path Tesseract jika di Windows ──────────────────────────────────
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-# ── Konfigurasi ───────────────────────────────────────────────────────────────
 CONFIG_TESSERACT = "--oem 3 --psm 6 -l ind+eng"
 DIR_GAMBAR       = "data/gambar"
 DIR_GT           = "data/ground_truth"
@@ -25,7 +23,6 @@ CSV_OUTPUT       = "output/hasil_evaluasi.csv"
 TEKNIK_LIST = [
     "none",
     "grayscale",
-    "denoise",
     "clahe",
     "binarize",
     "line_removal",
@@ -43,35 +40,15 @@ def to_grayscale(image: np.ndarray) -> np.ndarray:
         return cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     return image.copy()
 
-# Denoising
-
-def denoise(gray: np.ndarray) -> tuple[np.ndarray, dict]:
-    noise_level = float(np.std(gray - cv2.GaussianBlur(gray, (5, 5), 0)))
-
-    if noise_level <= 10:
-        return gray, {
-            "applied": False,
-            "noise_level": round(noise_level, 2)
-        }
-
-    # gunakan median
-    result = cv2.medianBlur(gray, 3)
-
-    return result, {
-        "applied": True,
-        "noise_level": round(noise_level, 2),
-        "method": "median"
-    }
-
 #CLAHE
 
 def clahe(gray: np.ndarray) -> tuple[np.ndarray, dict]:
     std_val = float(np.std(gray))
 
-    if std_val >= 40:
+    if std_val >= 30:
         return gray, {"applied": False, "std_intensitas": round(std_val, 2)}
 
-    enhancer = cv2.createCLAHE(clipLimit=1.5, tileGridSize=(8, 8))
+    enhancer = cv2.createCLAHE(clipLimit=2.5, tileGridSize=(4, 4))
     result = enhancer.apply(gray)
     return result, {"applied": True, "std_intensitas": round(std_val, 2)}
 
@@ -87,7 +64,7 @@ def binarize(gray: np.ndarray) -> np.ndarray:
         cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
         cv2.THRESH_BINARY,
         111,
-        50
+        55
     )
 
 
@@ -109,32 +86,25 @@ def detect_table_lines(binary: np.ndarray) -> bool:
     total_pixels = h * w
 
     ratio = total_line_pixels / total_pixels
-
     return ratio > 0.003
 
 def remove_lines(binary: np.ndarray) -> tuple[np.ndarray, dict]:
     if not detect_table_lines(binary):
         return binary, {"applied": False, "reason": "tidak terdeteksi garis"}
-
     h, w = binary.shape
     inverted = ~binary 
-
     kernel_h = cv2.getStructuringElement(cv2.MORPH_RECT, (max(10, w // 40), 1))
     kernel_v = cv2.getStructuringElement(cv2.MORPH_RECT, (1, max(10, h // 40)))
-    
     line_h = cv2.morphologyEx(inverted, cv2.MORPH_OPEN, kernel_h)
     line_v = cv2.morphologyEx(inverted, cv2.MORPH_OPEN, kernel_v)
     
     masker_garis = cv2.add(line_h, line_v)
-
     kernel_tebal = np.ones((3, 3), np.uint8)
     masker_garis = cv2.dilate(masker_garis, kernel_tebal, iterations=1)
-
     hasil_inv = cv2.bitwise_and(inverted, inverted, mask=cv2.bitwise_not(masker_garis))
-    
     result = ~hasil_inv
-
     return result, {"applied": True}
+
 # ══════════════════════════════════════════════════════════════════════════════
 # 2. PIPELINE ADAPTIF LENGKAP
 # ══════════════════════════════════════════════════════════════════════════════
@@ -144,8 +114,6 @@ def pipeline_adaptive(image: np.ndarray) -> tuple[np.ndarray, dict]:
 
     img = to_grayscale(image)
     log["grayscale"] = {"applied": True}
-
-    img, log["denoise"]    = denoise(img)
 
     img, log["clahe"]      = clahe(img)
 
@@ -171,11 +139,6 @@ def process_single_technique(image: np.ndarray, technique: str) -> np.ndarray:
 
     elif technique == "grayscale":
         return to_grayscale(image)
-
-    elif technique == "denoise":
-        img = to_grayscale(image)
-        img, _ = denoise(img)
-        return img
 
     elif technique == "clahe":
         img = to_grayscale(image)
@@ -205,71 +168,27 @@ def process_single_technique(image: np.ndarray, technique: str) -> np.ndarray:
 # ══════════════════════════════════════════════════════════════════════════════
 
 def run_ocr(image: np.ndarray) -> dict:
-    """Jalankan Tesseract OCR dan bersihkan output teks."""
     pil_img = Image.fromarray(image)
+    
     text = pytesseract.image_to_string(pil_img, config=CONFIG_TESSERACT)
-
-    # Bersihkan simbol |
     text = text.replace("|", "")
-
-    # Hilangkan blank line berlebih
     text = re.sub(r'\n\s*\n+', '\n', text)
-
-    # Rapikan spasi tiap baris
     text = "\n".join(line.strip() for line in text.splitlines())
 
-    data = pytesseract.image_to_data(
-        pil_img,
-        config=CONFIG_TESSERACT,
-        output_type=pytesseract.Output.DICT
-    )
+    word_count = len([w for w in text.split() if w.strip()])
 
-   
-    word_count = len([w for w in data["text"] if w.strip()])
+    return {"text": text.strip(), "word_count": word_count}
 
-    return {
-        "text": text.strip(),
-        "word_count": word_count,
-    }
 # ══════════════════════════════════════════════════════════════════════════════
 # 5. PERHITUNGAN CER & WER
 # ══════════════════════════════════════════════════════════════════════════════
 
 def normalize_text(text: str) -> str:
     text = text.lower()
-    text = text.replace("\r", "")
-
-    text = text.replace("|", "")
-
-    text = re.sub(r'\n\s*\n+', '\n', text)
-
-    text = text.replace("—", "-")
-    text = text.replace("_", "-")
-
-    text = text.replace("√", "v")
-    text = text.replace("✓", "v")
-
-    text = text.encode("ascii", errors="ignore").decode("ascii")
-
-    # rapikan spasi TANPA merusak newline
-    text = re.sub(r'[ \t]+', ' ', text)
-
-    # rapikan tiap baris
-    text = "\n".join(line.strip() for line in text.splitlines())
-
+    text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
-
-
 def hitung_cer_wer(hypothesis: str, reference: str) -> dict:
-    """
-    Hitung CER (Character Error Rate) dan WER (Word Error Rate).
-    hypothesis : teks hasil OCR
-    reference  : teks ground truth
-
-    CER = (substitusi + hapus + tambah karakter) / total karakter referensi
-    WER = (substitusi + hapus + tambah kata)     / total kata referensi
-    """
     hyp = normalize_text(hypothesis)
     ref = normalize_text(reference)
 
@@ -280,7 +199,6 @@ def hitung_cer_wer(hypothesis: str, reference: str) -> dict:
     wer_val = round(wer(ref, hyp) * 100, 2)   # dalam persen
 
     return {"cer": cer_val, "wer": wer_val}
-
 
 # ══════════════════════════════════════════════════════════════════════════════
 # 6. FUNGSI UTAMA EVALUASI
@@ -347,6 +265,8 @@ def run_evaluasi():
         "teknik",
         "cer_persen",
         "wer_persen",
+        "jumlah_karakter_ocr",
+        "jumlah_karakter_gt",
         "jumlah_kata_ocr",
         "jumlah_kata_gt",
         "waktu_detik",
@@ -358,8 +278,9 @@ def run_evaluasi():
         path_gambar = os.path.join(DIR_GAMBAR, nama_file)
         ground_truth = load_ground_truth(nama_file)
 
-        # Hitung jumlah kata ground truth
+        # Hitung jumlah kata dan karakter ground truth
         gt_word_count = len(normalize_text(ground_truth).split()) if ground_truth else 0
+        gt_char_count = len(normalize_text(ground_truth).replace(" ", "")) if ground_truth else 0
 
         # Buat subfolder output per gambar
         base_name = os.path.splitext(nama_file)[0]
@@ -388,6 +309,9 @@ def run_evaluasi():
                 # OCR
                 ocr_result = run_ocr(processed)
 
+                # Hitung jumlah karakter OCR
+                ocr_char_count = len(normalize_text(ocr_result["text"]).replace(" ", ""))
+
                 # CER & WER
                 if ground_truth:
                     metrik = hitung_cer_wer(ocr_result["text"], ground_truth)
@@ -406,13 +330,15 @@ def run_evaluasi():
                     f.write(ocr_result["text"])
 
                 baris = {
-                    "nama_file"       : nama_file,
-                    "teknik"          : teknik,
-                    "cer_persen"      : metrik["cer"],
-                    "wer_persen"      : metrik["wer"],
-                    "jumlah_kata_ocr" : ocr_result["word_count"],
-                    "jumlah_kata_gt"  : gt_word_count,
-                    "waktu_detik"     : elapsed,
+                    "nama_file"          : nama_file,
+                    "teknik"             : teknik,
+                    "cer_persen"         : metrik["cer"],
+                    "wer_persen"         : metrik["wer"],
+                    "jumlah_karakter_ocr": ocr_char_count,
+                    "jumlah_karakter_gt" : gt_char_count,
+                    "jumlah_kata_ocr"    : ocr_result["word_count"],
+                    "jumlah_kata_gt"     : gt_word_count,
+                    "waktu_detik"        : elapsed,
                 }
                 semua_hasil.append(baris)
 
@@ -426,20 +352,21 @@ def run_evaluasi():
                 elapsed = round(time.time() - mulai, 2)
                 print(f"ERROR: {e}")
                 semua_hasil.append({
-                    "nama_file"       : nama_file,
-                    "teknik"          : teknik,
-                    "cer_persen"      : -1.0,
-                    "wer_persen"      : -1.0,
-                    "jumlah_kata_ocr" : 0,
-                    "jumlah_kata_gt"  : gt_word_count,
-                    "waktu_detik"     : elapsed,
+                    "nama_file"          : nama_file,
+                    "teknik"             : teknik,
+                    "cer_persen"         : -1.0,
+                    "wer_persen"         : -1.0,
+                    "jumlah_karakter_ocr": 0,
+                    "jumlah_karakter_gt" : gt_char_count,
+                    "jumlah_kata_ocr"    : 0,
+                    "jumlah_kata_gt"     : gt_word_count,
+                    "waktu_detik"        : elapsed,
                 })
 
         print()
 
     # ── Tulis CSV ──────────────────────────────────────────────────────────────
     with open(CSV_OUTPUT, "w", newline="", encoding="utf-8-sig") as f:
-        # utf-8-sig agar Excel langsung bisa buka tanpa masalah encoding
         writer = csv.DictWriter(f, fieldnames=csv_header)
         writer.writeheader()
         writer.writerows(semua_hasil)

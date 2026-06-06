@@ -1,11 +1,10 @@
-0 4
-LAPORAN PERJALANAN DINAS
+bd «
 1. Nomor/Tanggal SPD : 000.1.2.3/ 14 DKP -VII
-2. Atas Nama dan Jabatan : Taufig Marisi, SE / Penata Layanan Operasional
+2. Atas Nama dan Jabatan : Taufig Marisi, SE/ Penata Layanan Operasional
 3. Maksud PerjalananDinas : Menghadiri Pelaksanaan Pekan Daerah XI
 Provinsi Kalimantan Timur
 4. Tujuan Perjalanan Dinas : Kutai Barat
-5. Tanggal Pelaksanaan : 3 (Tiga) Hari/ 20 Juni 2025 - 22 Juni 2025
+5. Tanggal Pelaksanaan : 3 (Tiga) Hari / 20 Juni 2025 - 22 Juni 2025
 6. Hasil Perjalanan Dinas :
 Peda mengangkat tema "Tingkatkan Produksi dan Daya Saing Petani Nelayan
 menuju Swasembada Pangan di Kalimantan Timur" dibagi lima kegiatan, yakni upacara
@@ -30,5 +29,5 @@ Barat dan pimpinan perangkat daerah Pemkab Kutai Barat, Ketua Umum KTNA Nasional
 Ketua KTNA Kaltim dan kabupaten/kota se-Kaltim.
 Muara Badak, 23 Juni 2025
 Yang Melaksanakan Perjalanan,
-Taufig Marisi, SE
+Taufig Marisi. SE
 NI PPPK. 19790721 202521 1 004

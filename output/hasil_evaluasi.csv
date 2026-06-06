@@ -1,0 +1,109 @@
+﻿nama_file,teknik,cer_persen,wer_persen,jumlah_karakter_ocr,jumlah_karakter_gt,jumlah_kata_ocr,jumlah_kata_gt,waktu_detik
+ASet BMD_page1.png,none,20.13,40.7,530,526,101,86,1.78
+ASet BMD_page1.png,grayscale,32.24,60.47,447,526,84,86,1.06
+ASet BMD_page1.png,clahe,17.18,36.05,528,526,96,86,1.31
+ASet BMD_page1.png,binarize,19.8,44.19,518,526,99,86,1.34
+ASet BMD_page1.png,line_removal,9.66,29.07,556,526,104,86,1.12
+ASet BMD_page1.png,adaptive,7.53,23.26,548,526,103,86,1.07
+BPH Manual_page1.png,none,45.37,61.15,525,838,98,157,2.05
+BPH Manual_page1.png,grayscale,54.33,77.71,547,838,113,157,1.63
+BPH Manual_page1.png,clahe,54.33,77.71,547,838,113,157,1.64
+BPH Manual_page1.png,binarize,56.54,75.8,430,838,84,157,1.42
+BPH Manual_page1.png,line_removal,2.11,9.55,836,838,167,157,1.45
+BPH Manual_page1.png,adaptive,2.11,9.55,836,838,167,157,1.36
+BPH Manual_page2.png,none,19.78,46.75,740,777,155,154,1.83
+BPH Manual_page2.png,grayscale,25.7,51.95,712,777,151,154,1.15
+BPH Manual_page2.png,clahe,29.25,53.25,676,777,144,154,1.22
+BPH Manual_page2.png,binarize,28.71,48.05,684,777,133,154,1.23
+BPH Manual_page2.png,line_removal,7.74,16.88,821,777,176,154,1.19
+BPH Manual_page2.png,adaptive,5.05,11.69,803,777,167,154,1.27
+Laporan Pemberian pakan_page1.png,none,40.72,75.49,532,508,125,102,2.44
+Laporan Pemberian pakan_page1.png,grayscale,44.83,90.2,660,508,152,102,1.77
+Laporan Pemberian pakan_page1.png,clahe,44.83,90.2,660,508,152,102,1.93
+Laporan Pemberian pakan_page1.png,binarize,35.14,80.39,574,508,139,102,1.56
+Laporan Pemberian pakan_page1.png,line_removal,9.36,20.59,527,508,114,102,0.98
+Laporan Pemberian pakan_page1.png,adaptive,9.36,20.59,527,508,114,102,1.11
+Laporan Pengisian air_page1.png,none,37.66,73.2,546,528,91,97,1.74
+Laporan Pengisian air_page1.png,grayscale,46.79,77.32,421,528,80,97,0.89
+Laporan Pengisian air_page1.png,clahe,46.79,77.32,421,528,80,97,0.92
+Laporan Pengisian air_page1.png,binarize,47.44,71.13,342,528,75,97,0.88
+Laporan Pengisian air_page1.png,line_removal,9.62,25.77,516,528,112,97,1.07
+Laporan Pengisian air_page1.png,adaptive,9.62,25.77,516,528,112,97,1.11
+Laporan Pergantain Air_page1.png,none,31.65,53.39,529,695,96,118,1.65
+Laporan Pergantain Air_page1.png,grayscale,44.83,72.03,535,695,102,118,1.19
+Laporan Pergantain Air_page1.png,clahe,44.83,72.03,535,695,102,118,1.15
+Laporan Pergantain Air_page1.png,binarize,37.81,64.41,501,695,90,118,0.91
+Laporan Pergantain Air_page1.png,line_removal,9.61,30.51,731,695,145,118,1.15
+Laporan Pergantain Air_page1.png,adaptive,9.61,30.51,731,695,145,118,1.22
+Panen Juni (1)_page1.png,none,49.09,71.43,363,552,64,105,1.61
+Panen Juni (1)_page1.png,grayscale,47.87,69.52,357,552,69,105,1.05
+Panen Juni (1)_page1.png,clahe,47.87,69.52,357,552,69,105,1.06
+Panen Juni (1)_page1.png,binarize,42.23,62.86,400,552,85,105,1.1
+Panen Juni (1)_page1.png,line_removal,13.72,29.52,588,552,127,105,1.09
+Panen Juni (1)_page1.png,adaptive,13.72,29.52,588,552,127,105,1.1
+Pengecekan Benur Udang_page1.png,none,62.04,89.83,1403,3218,168,600,3.48
+Pengecekan Benur Udang_page1.png,grayscale,48.81,88.0,1947,3218,228,600,3.11
+Pengecekan Benur Udang_page1.png,clahe,48.81,88.0,1947,3218,228,600,2.98
+Pengecekan Benur Udang_page1.png,binarize,76.47,91.17,854,3218,141,600,1.5
+Pengecekan Benur Udang_page1.png,line_removal,4.74,20.33,3220,3218,603,600,3.26
+Pengecekan Benur Udang_page1.png,adaptive,4.74,20.33,3220,3218,603,600,3.25
+Pengeringan kolam Juni_page1.png,none,37.6,60.0,312,421,54,80,1.24
+Pengeringan kolam Juni_page1.png,grayscale,38.4,58.75,300,421,53,80,0.85
+Pengeringan kolam Juni_page1.png,clahe,38.4,58.75,300,421,53,80,0.89
+Pengeringan kolam Juni_page1.png,binarize,36.8,62.5,300,421,60,80,1.23
+Pengeringan kolam Juni_page1.png,line_removal,8.0,15.0,404,421,81,80,1.13
+Pengeringan kolam Juni_page1.png,adaptive,8.0,15.0,404,421,81,80,0.88
+Pengisian Air_page1.png,none,49.33,67.37,303,502,61,95,1.0
+Pengisian Air_page1.png,grayscale,47.82,74.74,400,502,78,95,0.83
+Pengisian Air_page1.png,clahe,49.16,72.63,355,502,67,95,0.76
+Pengisian Air_page1.png,binarize,48.83,71.58,357,502,71,95,0.87
+Pengisian Air_page1.png,line_removal,13.26,27.37,544,502,117,95,1.08
+Pengisian Air_page1.png,adaptive,5.7,18.95,519,502,103,95,0.97
+Perdin acara PEDA di Kubar_page1.png,none,0.21,1.75,1648,1648,284,285,2.56
+Perdin acara PEDA di Kubar_page1.png,grayscale,0.26,2.11,1648,1648,284,285,1.61
+Perdin acara PEDA di Kubar_page1.png,clahe,0.26,2.11,1648,1648,284,285,1.64
+Perdin acara PEDA di Kubar_page1.png,binarize,1.6,4.21,1627,1648,282,285,1.55
+Perdin acara PEDA di Kubar_page1.png,line_removal,1.6,4.21,1627,1648,282,285,1.59
+Perdin acara PEDA di Kubar_page1.png,adaptive,1.6,4.21,1627,1648,282,285,1.79
+Perdin juni ecm_page1.png,none,5.49,16.11,1275,1246,233,211,2.52
+Perdin juni ecm_page1.png,grayscale,5.43,13.74,1264,1246,232,211,1.72
+Perdin juni ecm_page1.png,clahe,5.43,13.74,1264,1246,232,211,1.76
+Perdin juni ecm_page1.png,binarize,3.02,8.06,1242,1246,219,211,1.69
+Perdin juni ecm_page1.png,line_removal,3.5,9.48,1251,1246,221,211,1.9
+Perdin juni ecm_page1.png,adaptive,3.5,9.48,1251,1246,221,211,1.8
+Perdin juni ecm_page2.png,none,0.77,4.76,1002,1000,166,168,1.78
+Perdin juni ecm_page2.png,grayscale,0.77,4.76,1001,1000,166,168,1.14
+Perdin juni ecm_page2.png,clahe,0.77,4.76,1001,1000,166,168,1.18
+Perdin juni ecm_page2.png,binarize,0.51,3.57,1000,1000,166,168,1.17
+Perdin juni ecm_page2.png,line_removal,0.51,3.57,1000,1000,166,168,1.19
+Perdin juni ecm_page2.png,adaptive,0.51,3.57,1000,1000,166,168,1.39
+Perdin juni ecm_page3.png,none,0.72,1.96,598,595,104,102,1.85
+Perdin juni ecm_page3.png,grayscale,0.86,1.96,599,595,104,102,1.15
+Perdin juni ecm_page3.png,clahe,0.86,1.96,599,595,104,102,1.18
+Perdin juni ecm_page3.png,binarize,0.86,3.92,598,595,104,102,1.05
+Perdin juni ecm_page3.png,line_removal,1.29,3.92,597,595,105,102,1.24
+Perdin juni ecm_page3.png,adaptive,1.29,3.92,597,595,105,102,1.16
+Promosi Hasil Benih_page1.png,none,20.28,37.5,630,607,118,104,1.69
+Promosi Hasil Benih_page1.png,grayscale,18.03,40.38,606,607,121,104,1.31
+Promosi Hasil Benih_page1.png,clahe,19.58,48.08,625,607,120,104,1.37
+Promosi Hasil Benih_page1.png,binarize,9.86,32.69,605,607,111,104,1.03
+Promosi Hasil Benih_page1.png,line_removal,7.61,26.92,617,607,114,104,1.08
+Promosi Hasil Benih_page1.png,adaptive,6.62,24.04,612,607,111,104,1.18
+laporan perjalanan176_page1.png,none,4.84,10.91,1252,1270,220,220,2.35
+laporan perjalanan176_page1.png,grayscale,5.51,14.55,1266,1270,229,220,1.52
+laporan perjalanan176_page1.png,clahe,5.57,14.55,1258,1270,226,220,1.59
+laporan perjalanan176_page1.png,binarize,3.56,15.0,1292,1270,237,220,1.71
+laporan perjalanan176_page1.png,line_removal,3.56,15.0,1292,1270,237,220,1.72
+laporan perjalanan176_page1.png,adaptive,3.49,14.09,1284,1270,231,220,1.85
+laporan perjalanan176_page2.png,none,1.86,11.97,1770,1788,305,309,2.27
+laporan perjalanan176_page2.png,grayscale,1.81,11.65,1770,1788,306,309,1.58
+laporan perjalanan176_page2.png,clahe,1.81,11.65,1770,1788,306,309,1.61
+laporan perjalanan176_page2.png,binarize,3.15,14.24,1790,1788,304,309,1.75
+laporan perjalanan176_page2.png,line_removal,3.15,14.24,1790,1788,304,309,1.59
+laporan perjalanan176_page2.png,adaptive,3.15,14.24,1790,1788,304,309,1.64
+llaporan kegiatan kebersihan tempat ibadah177_page1.png,none,15.84,38.61,627,626,111,101,1.52
+llaporan kegiatan kebersihan tempat ibadah177_page1.png,grayscale,12.4,28.71,594,626,103,101,0.94
+llaporan kegiatan kebersihan tempat ibadah177_page1.png,clahe,12.4,28.71,594,626,103,101,0.98
+llaporan kegiatan kebersihan tempat ibadah177_page1.png,binarize,12.26,32.67,631,626,107,101,1.1
+llaporan kegiatan kebersihan tempat ibadah177_page1.png,line_removal,12.12,34.65,660,626,125,101,1.15
+llaporan kegiatan kebersihan tempat ibadah177_page1.png,adaptive,12.12,34.65,660,626,125,101,1.19

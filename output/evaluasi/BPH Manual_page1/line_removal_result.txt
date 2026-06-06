@@ -1,13 +1,13 @@
-PEMERINTAH PROVINSI KALIMANTAN TIMUR
-DINAS KELAUTAN DAN PERIKANAN
+ro PEMERINTAH PROVINSI KALIMANTAN TIMUR
+" 7 DINAS KELAUTAN DAN PERIKANAN
 UPTD SENTRAL PEMBENIHAN AIR PAYAU DAN AIR LAUT
 MUARA BADAK - SEBULU
-Jalan AM. Tahir, Muara Badak, Kalimantan Timur 75382
-Pos-el uptd.spapal.muarabadak sebulu@gmail com, Laman https://dkp.kaltimprov.go.id
+Jalan AM Tahir, Muara Badak, Kaimantan Timur 75382
+al Pos-el uptd spapal. muarabadak sebulu@gmail com, Laman https //dkp kaltimprov.go.id
 REKAP BARANG PAKAI HABIS
 No Tanggal Nama Barang Jumlah Satuan Pengambil
 1 4/6/2025 Bahan Bakar Diesel Non Subsidi 20 Liter Handoyo Suharyo, S. Pi
-2 4/6/2025 Induk Udang Windu S0 Ekor Edward Edi Hardadi, S. Pd
+2 4/6/2025 Induk Udang Windu 50 Ekor Edward Edi Hardadi, S. Pd
 3 6/6/2025 Map Plastik Kancing 1 Pack Muhammad Ripai
 4 6/6/2025 Papan UK 1 Pcs Muhammad Ripai
 5 6/6/2025 Kertas HVS A4 4 Rim Muhammad Ripai
